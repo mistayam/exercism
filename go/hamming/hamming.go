@@ -9,16 +9,17 @@ import (
 // Distance takes two strings, containing strands of DNA.
 // The function returns the hamming distance between the two.
 func Distance(a, b string) (int, error) {
-	hamDist := 0
-
-	if len(a) == len(b) {
-		for i := 0; i < len(a); i++ {
-			if a[i] != b[i] {
-				hamDist++
-			}
-		}
-	} else {
+	if len(a) != len(b) {
 		return -1, errors.New("error: strands are not equal in length")
 	}
+
+	hamDist := 0
+
+	for i := range a {
+		if a[i] != b[i] {
+			hamDist++
+		}
+	}
+
 	return hamDist, nil
 }
