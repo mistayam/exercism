@@ -1,8 +1,7 @@
-// Package greeting should have a package comment that summarizes what it's about.
-// https://golang.org/doc/effective_go.html#commentary
+//Package greeting implements HelloWorld function
 package greeting
 
-// A function that returns 'Hello, World!' as a string
+// HelloWorld that returns a string "Hello, World!
 func HelloWorld() string {
 	return "Hello, World!"
 }
